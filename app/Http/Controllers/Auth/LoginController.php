@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if(!auth()->attempt($request->only('email', 'password'))){
             // shortcut to redirect back to previous page
-            return back()->with('status', 'Invalid');
+            return back()->with('status', 'Invalid login details');
         }
 
         return redirect()-> route('dashboard');
