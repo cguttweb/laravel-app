@@ -34,5 +34,5 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']); // name inherits so no need to declare
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
-Route::get('/posts', [PostController::class, 'store']);
+Route::post('/posts', [PostController::class, 'store']);
 
