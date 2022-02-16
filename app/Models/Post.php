@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    // start at 1h15m on youtube video
+    protected $fillable = [
+        'body'
+    ]
 }
