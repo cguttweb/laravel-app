@@ -11,7 +11,9 @@ class PostController extends Controller
 
         $posts = Post::get(); // collection
 
-        return view('posts.index');
+        return view('posts.index', [
+            'posts' => $posts
+        ]);
     }
 
     public function store(Request $request){

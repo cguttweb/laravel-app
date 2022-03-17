@@ -20,6 +20,17 @@
           </div>
         </div>
       </form>
+
+      @if ($posts->count())
+      @foreach ($posts as $post)
+        <div class="mb-4">
+          <a class="font-bold" href="#">{{ $post->user->name }}</a> <span class="text-sm">{{ $post->created_at }}</span>
+          <p class="mb-2">{{ $post -> body}}</p> 
+        </div>
+      @endforeach
+      @else 
+        <p>There are no posts</p>
+      @endif
     </div>
   </div>
 @endsection
