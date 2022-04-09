@@ -19273,8 +19273,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "bg-white text-black w-full px-4 py-4 lg:w-2/4 mx-auto mt-20"
+};
 function render(_ctx, _cache) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, " This is a vue component Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda eius facere odio tenetur. Adipisci aspernatur consequuntur cumque deleniti distinctio dolor doloremque, dolorum eligendi enim exercitationem id illum ipsa iusto laudantium magni minus molestias nesciunt quasi sed totam. Accusantium adipisci amet, animi aut consequatur dolorem eveniet exercitationem illum maiores natus non perspiciatis reiciendis reprehenderit sapiente soluta, vel voluptatem. A accusamus accusantium, aliquam animi at aut autem blanditiis cupiditate deserunt distinctio doloremque dolorum eius eligendi eos esse est excepturi facere illum, in ipsa ipsam iusto provident quasi quod sit! Aperiam autem consequatur hic nobis odio ratione totam voluptates? Placeat similique voluptas voluptate. ");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, " This is a vue home component ");
 }
 
 /***/ }),
@@ -19291,13 +19294,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Home.vue */ "./resources/js/components/Home.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+ //importing your vue components
 
 
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
-  components: {
-    Home: _components_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }
-}).mount('#app');
+var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({}); // your vue components
+
+app.component('Home', _components_Home_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
+app.mount('#app');
+console.log('loaded');
 
 /***/ }),
 
