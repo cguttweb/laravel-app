@@ -11,7 +11,7 @@ class PostFactory extends Factory
      *
      * @return array
      */
-    // >>> App\Models\Posts::factory()->times(200)->create([user_id' => 2]);
+    // Start from 1h30mins in
     public function definition()
     {
         return [
